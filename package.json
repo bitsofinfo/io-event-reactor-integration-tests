@@ -22,11 +22,12 @@
         "directories"
     ],
     "dependencies":{
+        "dateformat":"latest",
         "io-event-reactor":"latest",
         "io-event-reactor-plugin-support":"latest",
         "io-event-reactor-plugin-chokidar":"latest",
         "io-event-reactor-plugin-mysql":"latest",
-        "io-event-reactor-plugin-shell-exec":"latest",
+        "io-event-reactor-plugin-shell-exec":"latest"
     },
     "devDependencies":{
         "mocha":"latest"

@@ -87,7 +87,7 @@ var config = {
                           ],
 
                           commandGenerator: function(ioEvent) {
-                            return [('myCommand ' + ioEvent.eventType + '->' + ioEvent.fullPath + '[' + (ioEvent.optionalFsStats ? ioEvent.optionalFsStats.size : '?') +']')];
+                            return [('myCommand ' + ioEvent.eventType + '-' + ioEvent.fullPath + '[' + (ioEvent.optionalFsStats ? ioEvent.optionalFsStats.size : '?') +']')];
                           }
                       }
                 },
@@ -98,16 +98,16 @@ var config = {
                         poolConfig : {
                           host     : 'localhost',
                           user     : 'root',
-                          password : '123',
-                          database : 'testdb'
+                          password : 'root',
+                          database : 'io_event_reactor'
                         },
 
                         sqlTemplates: [
-                            'INSERT INTO testtable (context,file,type) VALUES("{{{ioEvent.context.timestamp}}}","{{{ioEvent.filename}}}","{{{ioEvent.eventType}}}")'
+                            'INSERT INTO io_event (eventType,fullPath,status) VALUES("{{{ioEvent.eventType}}}","{{{ioEvent.fullPath}}}","{{{ioEvent.optionalFsStats}}}")'
                         ],
 
                         sqlGenerator: function(ioEvent) {
-                            return [('INSERT INTO testtable (context,file,type) VALUES("'+ioEvent.context.timestamp+'","'+ioEvent.fullPath+'","'+ioEvent.eventType+'")')];
+                            return [('INSERT INTO io_event (eventType,fullPath,status) VALUES("'+ioEvent.eventType+'","'+ioEvent.fullPath+'","'+ioEvent.optionalFsStats.size+'")')];
                         },
                     }
                 }
