@@ -1,6 +1,6 @@
 {
     "name":"io-event-reactor-integration-tests",
-    "version":"1.0.0-beta.1",
+    "version":"1.0.0-beta.2",
     "description":"Integration tests for io-event-reactor and its plugin ecosystem",
     "main":"ioReactorService.js",
     "directories":{
