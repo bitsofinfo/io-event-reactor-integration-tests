@@ -22,6 +22,9 @@
         "directories"
     ],
     "dependencies":{
+        "command-line-args":"latest",
+        "node-uuid":"latest",
+        "node-mysql":"latest",
         "dateformat":"latest",
         "io-event-reactor":"latest",
         "io-event-reactor-plugin-support":"latest",
@@ -30,7 +33,8 @@
         "io-event-reactor-plugin-shell-exec":"latest"
     },
     "devDependencies":{
-        "mocha":"latest"
+        "mocha":"latest",
+        "node-uuid":"latest"
     },
     "contributors":[
         {
