@@ -1,0 +1,49 @@
+{
+    "name":"io-event-reactor-integration-tests",
+    "version":"1.0.0-beta.1",
+    "description":"Integration tests for io-event-reactor and its plugin ecosystem",
+    "main":"ioReactorService.js",
+    "directories":{
+        "test":"test"
+    },
+    "scripts":{
+        "test":"mocha test/all.js"
+    },
+    "keywords":[
+        "io",
+        "event",
+        "monitor",
+        "changes",
+        "alert",
+        "watch",
+        "file",
+        "directory",
+        "filesystem",
+        "directories"
+    ],
+    "dependencies":{
+        "io-event-reactor":"latest",
+        "io-event-reactor-plugin-support":"latest",
+        "io-event-reactor-plugin-chokidar":"latest",
+        "io-event-reactor-plugin-mysql":"latest",
+        "io-event-reactor-plugin-shell-exec":"latest",
+    },
+    "devDependencies":{
+        "mocha":"latest"
+    },
+    "contributors":[
+        {
+            "name":"bitsofinfo",
+            "url":"http://bitsofinfo.wordpress.com"
+        }
+    ],
+    "license":"ISC",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/bitsofinfo/io-event-reactor-integration-tests.git"
+    },
+    "bugs":{
+        "url":"https://github.com/bitsofinfo/io-event-reactor-integration-tests/issues"
+    },
+    "homepage":"https://github.com/bitsofinfo/io-event-reactor-integration-tests"
+}
