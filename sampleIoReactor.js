@@ -170,18 +170,20 @@ var config = {
                   plugin: "io-event-reactor-plugin-shell-exec",
                   config: {
                       statefulProcessCommandProxy: {
-                          name: "ioReactor-test1-shell-exec",
-                          max: 2,
-                          min: 1,
-                          idleTimeoutMS: 120000,
-                          logFunction: logger,
-                          processCommand: shellConfig.processCommand,
-                          processArgs:  shellConfig.processArgs,
-                          processRetainMaxCmdHistory : 10,
-                          processCwd : './',
-                          validateFunction: function(processProxy) {
-                              return processProxy.isValid();
-                          }
+                            config: {
+                                  name: "ioReactor-test1-shell-exec",
+                                  max: 2,
+                                  min: 1,
+                                  idleTimeoutMS: 120000,
+                                  logFunction: logger,
+                                  processCommand: shellConfig.processCommand,
+                                  processArgs:  shellConfig.processArgs,
+                                  processRetainMaxCmdHistory : 10,
+                                  processCwd : './',
+                                  validateFunction: function(processProxy) {
+                                      return processProxy.isValid();
+                                  }
+                              }
                       },
                       commandTemplates: shellConfig.commandTemplates,
                       commandGenerator: shellConfig.commandGenerator
