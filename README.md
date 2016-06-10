@@ -5,6 +5,8 @@ Sample integration test application for [io-event-reactor](https://github.com/bi
 This is not available as NPM module. To use it, simple clone this repository, go the root of the project and type
 
 ```
+git clone https://github.com/bitsofinfo/io-event-reactor-integration-tests.git
+cd io-event-reactor-integration-tests/
 npm install .
 ```
 
